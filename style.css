@@ -254,6 +254,31 @@ form button {
 }
 
 
+summary {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+details ul {
+  padding: 20px;
+  color: #fff;
+}
+
+details p {
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+details p a {
+  color: hsla(219, 68%, 51%, 0.99);
+  font-weight: bold;
+  font-size: 17px;
+}
+
 footer {
   margin-bottom: 0;
   margin-top: 10px;
