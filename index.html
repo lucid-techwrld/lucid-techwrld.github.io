@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
   <title>My Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
   <!-- HTML -->
 
@@ -38,7 +39,7 @@
       </div>
     </section>
 
-    <section class="languages">
+    <section class="languages hidden">
       <h1>Languages and Tools</h1>
       <div class="language-container">
         <div class="html">
@@ -76,7 +77,7 @@
       </div>
     </section>
     
-    <section class="projects-section">
+    <section class="projects-section hidden">
         <details>
           <summary>
             LIST OF MY PROJECTS
@@ -119,12 +120,12 @@
         </details>
     </section>
 
-    <section class="about-section">
+    <section class="about-section hidden">
       <h1 id="about">About Me:</h1>
       <p>Hello! I’m Davis Ayomide, a passionate web developer with a love for creating dynamic and user-friendly web applications. With a background in Web Development, I have honed my skills in both front-end and back-end development, allowing me to build complete and efficient web solutions.</p>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section hidden">
       <h1>Get in touch</h1>
       <form action="">
         <div class="input-container">
@@ -166,7 +167,8 @@
     </small>
   </main>
 
-  <script src="main.js"></script>
+  <script src="main.js">
+  </script>
 </body>
 
 </html>
