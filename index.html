@@ -23,15 +23,24 @@
 <body>
   <!-- Project -->
   <header>
-    <h2>My <strong>Portfolio</strong></h2>
-    <button class="menu-icon">
-      <i class="fa fa-bars"></i>
-    </button>
+    <div class="main-header">
+      <h2>My <strong>Portfolio</strong></h2>
+      <button class="menu-icon">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="navigation">
+      <a href="#languages">Languages</a>
+      <a href="#projects">Projects & Experience </a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   </header>
-  <main>
+  <main class="block">
     <section class="info-section">
       <div class="info">
-        <h1 class="name"><strong>Davis</strong> Ayomide <span>_</span></h1>
+        <h1 class="name"><strong>Davis</strong> Ayomide <span id="blinker">_</span></h1>
         <h3 class="role">Full Stack Web Developer,<br>Software Engineer</h3>
       </div>
       <div class="image">
@@ -39,7 +48,7 @@
       </div>
     </section>
 
-    <section class="languages hidden">
+    <section class="languages hidden" id="languages">
       <h1>Languages and Tools</h1>
       <div class="language-container">
         <div class="html">
@@ -76,48 +85,48 @@
         </div>
       </div>
     </section>
-    
-    <section class="projects-section hidden">
-        <details>
-          <summary>
-            LIST OF MY PROJECTS
-          </summary>
-          <p><a href="affymart.html">AffyMart: </a>AffyMart is an e-commerce platform designed to facilitate online shopping, allowing users to browse and purchase a variety of products. The project aims to create a user-friendly interface that enhances the shopping experience, making it easy for customers to find and buy items conveniently. Key features of AffyMart may include:</p>
-          <ul list-style-type: square;>
-            <li>Product catalog with detailed descriptions and images</li>
-            <li>Product catalog with detailed descriptions and images</li>
-            <li>Shopping cart and checkout system for secure payment processing</li>
-            <li>Search and filtering options to help customers find specific products</li>
-            <li>Order tracking and management for a seamless post-purchase experience</li>
-          </ul>
-          <p><a href="landingpage.html">LandingPage: </a>I created a landing page designed to promote my latest project, AffyMart. The primary goal of this landing page is to capture visitor interest and encourage them to take action, such as signing up for updates or downloading a free resource. </p>
-          <ul>
-            <li>Compelling Headline: The page features a strong headline that immediately communicates the value of the project, drawing visitors in.</li>
-            <li>Concise and Persuasive Copy: The text is clear and to the point, highlighting the key benefits and unique selling points of the project, making it easy for visitors to understand what’s in it for them</li>
-            <li>Strong Call to Action: A prominent CTA button encourages visitors to "Sign Up Now" or "Get Started," making it easy for them to take the next step</li>
-            <li>Mobile-Friendly Design: The landing page is fully responsive, ensuring a seamless experience for users on both desktop and mobile devices.</li>
-          </ul>
-          <p><a href="login.html">Login and SignIn Page:</a> I created a user-friendly Login and Signup Page designed to facilitate easy access and registration for users of my application. The page aims to provide a seamless experience for both new and returning users, ensuring that they can quickly and securely log in or create an account.</p>
-          <ul>
-            <li>Clean and Intuitive Layout: The page features a simple and organized design, with clear sections for both login and signup, making it easy for users to navigate.</li>
-            <li>Email and Password Fields: Users can enter their registered email and password to access their accounts.</li>
-            <li>Forgot Password Link: A link is provided for users who may have forgotten their password, guiding them through the recovery process</li>
-            <li>Strong Call to Action: Clear buttons for "Login" and "Sign Up" are prominently displayed, encouraging users to take action.</li>
-            <li>Security Features: The page incorporates security measures such as password strength indicators and secure data handling practices to protect user information</li>
-          </ul>
-          <p><a href="memory.html">Memory Lane:</a> Memory Lane is a user-friendly mobile app designed to help you capture and cherish your most meaningful moments. Whether it’s a joyful celebration, a bittersweet farewell, or a quiet moment of reflection, Memory Lane allows you to document your experiences in a visually engaging and organized way.</p>
-          <ul>
-            <li>Memory Lane is a user-friendly mobile app designed to help you capture and cherish your most meaningful moments. Whether it’s a joyful celebration, a bittersweet farewell, or a quiet moment of reflection, Memory Lane allows you to document your experiences in a visually engaging and organized way.</li>
-            <li>Categorization: After taking a photo, users can select a category that best represents the emotion of the moment. Categories include options like "Happy," "Sad," "Exciting," "Nostalgic," and more, allowing for personalized organization of memories</li>
-            <li>Add Descriptions: Users can enhance their memories by adding a description to each photo. This feature allows for storytelling, enabling users to express their thoughts and feelings about the moment captured.</li>
-            <li>Search Functionality: The app includes a powerful search feature that allows users to find specific memories quickly. Users can search by category, date, or keywords in the description, making it easy to revisit particular moments from the past</li>
-            <li>User -Friendly Interface: The app is designed with a clean and intuitive interface, ensuring that users of all ages can navigate effortlessly</li>
-          </ul>
-          <p><a href="weather.html">Weather Wise:</a> WeatherWise is a comprehensive weather app designed to provide users with accurate, real-time weather information and forecasts. With its user-friendly interface and a range of features, WeatherWise helps you plan your day, stay safe during severe weather, and enjoy outdoor activities with confidence</p>
-          <ul>
-            <li>Real-Time Weather Updates: Get instant access to current weather conditions in your location, including temperature, humidity, wind speed, and atmospheric pressure. WeatherWise ensures you’re always informed about the weather around you.</li>
-          </ul>
-        </details>
+
+    <section id="projects" class="projects-section hidden">
+      <details>
+        <summary>
+          LIST OF MY PROJECTS
+        </summary>
+        <p><a href="affymart.html">AffyMart: </a>AffyMart is an e-commerce platform designed to facilitate online shopping, allowing users to browse and purchase a variety of products. The project aims to create a user-friendly interface that enhances the shopping experience, making it easy for customers to find and buy items conveniently. Key features of AffyMart may include:</p>
+        <ul list-style-type: square;>
+          <li>Product catalog with detailed descriptions and images</li>
+          <li>Product catalog with detailed descriptions and images</li>
+          <li>Shopping cart and checkout system for secure payment processing</li>
+          <li>Search and filtering options to help customers find specific products</li>
+          <li>Order tracking and management for a seamless post-purchase experience</li>
+        </ul>
+        <p><a href="landingpage.html">LandingPage: </a>I created a landing page designed to promote my latest project, AffyMart. The primary goal of this landing page is to capture visitor interest and encourage them to take action, such as signing up for updates or downloading a free resource. </p>
+        <ul>
+          <li>Compelling Headline: The page features a strong headline that immediately communicates the value of the project, drawing visitors in.</li>
+          <li>Concise and Persuasive Copy: The text is clear and to the point, highlighting the key benefits and unique selling points of the project, making it easy for visitors to understand what’s in it for them</li>
+          <li>Strong Call to Action: A prominent CTA button encourages visitors to "Sign Up Now" or "Get Started," making it easy for them to take the next step</li>
+          <li>Mobile-Friendly Design: The landing page is fully responsive, ensuring a seamless experience for users on both desktop and mobile devices.</li>
+        </ul>
+        <p><a href="login.html">Login and SignIn Page:</a> I created a user-friendly Login and Signup Page designed to facilitate easy access and registration for users of my application. The page aims to provide a seamless experience for both new and returning users, ensuring that they can quickly and securely log in or create an account.</p>
+        <ul>
+          <li>Clean and Intuitive Layout: The page features a simple and organized design, with clear sections for both login and signup, making it easy for users to navigate.</li>
+          <li>Email and Password Fields: Users can enter their registered email and password to access their accounts.</li>
+          <li>Forgot Password Link: A link is provided for users who may have forgotten their password, guiding them through the recovery process</li>
+          <li>Strong Call to Action: Clear buttons for "Login" and "Sign Up" are prominently displayed, encouraging users to take action.</li>
+          <li>Security Features: The page incorporates security measures such as password strength indicators and secure data handling practices to protect user information</li>
+        </ul>
+        <p><a href="memory.html">Memory Lane:</a> Memory Lane is a user-friendly mobile app designed to help you capture and cherish your most meaningful moments. Whether it’s a joyful celebration, a bittersweet farewell, or a quiet moment of reflection, Memory Lane allows you to document your experiences in a visually engaging and organized way.</p>
+        <ul>
+          <li>Memory Lane is a user-friendly mobile app designed to help you capture and cherish your most meaningful moments. Whether it’s a joyful celebration, a bittersweet farewell, or a quiet moment of reflection, Memory Lane allows you to document your experiences in a visually engaging and organized way.</li>
+          <li>Categorization: After taking a photo, users can select a category that best represents the emotion of the moment. Categories include options like "Happy," "Sad," "Exciting," "Nostalgic," and more, allowing for personalized organization of memories</li>
+          <li>Add Descriptions: Users can enhance their memories by adding a description to each photo. This feature allows for storytelling, enabling users to express their thoughts and feelings about the moment captured.</li>
+          <li>Search Functionality: The app includes a powerful search feature that allows users to find specific memories quickly. Users can search by category, date, or keywords in the description, making it easy to revisit particular moments from the past</li>
+          <li>User -Friendly Interface: The app is designed with a clean and intuitive interface, ensuring that users of all ages can navigate effortlessly</li>
+        </ul>
+        <p><a href="weather.html">Weather Wise:</a> WeatherWise is a comprehensive weather app designed to provide users with accurate, real-time weather information and forecasts. With its user-friendly interface and a range of features, WeatherWise helps you plan your day, stay safe during severe weather, and enjoy outdoor activities with confidence</p>
+        <ul>
+          <li>Real-Time Weather Updates: Get instant access to current weather conditions in your location, including temperature, humidity, wind speed, and atmospheric pressure. WeatherWise ensures you’re always informed about the weather around you.</li>
+        </ul>
+      </details>
     </section>
 
     <section class="about-section hidden">
@@ -125,7 +134,7 @@
       <p>Hello! I’m Davis Ayomide, a passionate web developer with a love for creating dynamic and user-friendly web applications. With a background in Web Development, I have honed my skills in both front-end and back-end development, allowing me to build complete and efficient web solutions.</p>
     </section>
 
-    <section class="contact-section hidden">
+    <section id="" class="contact-section hidden">
       <h1>Get in touch</h1>
       <form action="">
         <div class="input-container">
@@ -154,7 +163,7 @@
       </form>
       <div class="contact">
         <p><i class="fa fa-phone"></i> +2348082926609</p>
-        <p><i class="fa fa-whatsapp"></i>  +2347085948512</p>
+        <p><i class="fa fa-whatsapp"></i> +2347085948512</p>
         <p><i class="fa fa-envelope"></i> lucidtechwrld9@gmail.com</p>
       </div>
     </section>
@@ -167,7 +176,7 @@
     </small>
   </main>
 
-  <script src="main.js">
+  <script defer src="main.js">
   </script>
 </body>
 
