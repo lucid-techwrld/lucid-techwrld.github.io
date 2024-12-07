@@ -70,3 +70,10 @@ navButton.addEventListener('click', () => {
   
   show = !show;
 })
+
+
+const toast = document.querySelector(".toast-btn");
+const toastContainer = document.querySelector(".toast-container");
+toast.addEventListener('click', () => {
+  toastContainer.style.display = "none"
+})
