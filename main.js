@@ -38,6 +38,7 @@ function showBlinker() {
 
 setInterval(showBlinker, 1000);
 
+
 function updateHeaderHeight() {
   const header = document.querySelector('header');
   const headerHeight = header.offsetHeight; // Get the actual height of the header
@@ -47,3 +48,25 @@ function updateHeaderHeight() {
 // Call the function on load and on resize
 window.addEventListener('load', updateHeaderHeight);
 window.addEventListener('resize', updateHeaderHeight);
+
+
+const icon = document.querySelector('.fa')
+const navigation = document.querySelector('.navigation')
+const navButton = document.querySelector('.menu-icon');
+
+let show = true;
+navButton.addEventListener('click', () => {
+  if (show) {
+    navigation.style.display = "flex";
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times')
+    updateHeaderHeight()
+  } else {
+    navigation.style.display = "none"
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars')
+    updateHeaderHeight()
+  }
+  
+  show = !show;
+})

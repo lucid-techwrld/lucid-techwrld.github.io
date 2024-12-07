@@ -8,7 +8,8 @@ body {
   background: hsla(0, 0%, 14%, 1);
   width: 100%;
   height: 100vh;
-  margin: 0; /* Ensure no default margin on body */
+  margin: 0; 
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -42,19 +43,33 @@ header .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: height .5s ease-in-out;
 }
 
 header .navigation {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 10px;
   width: 100%;
+  transition: .5s ease-in-out
 }
 
 header .navigation a {
   text-decoration: none;
   text-align: left;
+  height: 30px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: hsla(235, 88%, 51%, 1);
 }
+
+.navigation a:hover {
+  color: #fff;
+}
+
 
 header .menu-icon {
   width: 35px;
