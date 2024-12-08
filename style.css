@@ -5,28 +5,34 @@
 }
 
 body {
-  background: hsla(0, 0%, 14%, 1);
+  background: var(--background-color);
   width: 100%;
   height: 100vh;
-  margin: 0; 
+  margin: 0;
   scroll-behavior: smooth;
 }
 
 :root {
-  --header-height: 40px; /* Default height of the header */
+  --header-height: 40px;
+  --primary-color: #fff;
+  --secondary-color: hsla(219, 68%, 51%, 0.99);
+  --dark-color: hsla(235, 98%, 6%, 1);
+  --background-color: hsla(0, 0%, 14%, 1);
+  --other-color: hsla(235, 88%, 51%, 1);
 }
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: var(--header-height); /* Use the CSS variable for margin */
+  margin-top: var(--header-height);
   padding: 15px;
 }
 
 header {
-  background: hsla(219, 68%, 51%, 0.99);
-  height: auto; /* Allow the height to adjust based on content */
+  background: var(--secondary-color);
+  height: auto;
+  /* Allow the height to adjust based on content */
   top: 0;
   margin: 0;
   position: fixed;
@@ -63,7 +69,7 @@ header .navigation a {
   font-size: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
-  color: hsla(235, 88%, 51%, 1);
+  color: var(--other-color);
 }
 
 .navigation a:hover {
@@ -82,15 +88,16 @@ header .menu-icon {
   background: none;
 }
 
-header h2 {
+.main-header h2 {
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--dark-color);
 }
 
-header h2 strong {
+.main-header h2 strong {
   color: #fff;
   font-style: italic;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 20px;
   padding: 0 5px;
 }
@@ -100,6 +107,59 @@ header h2 strong {
   color: #fff;
 }
 
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.toggle-btn {
+  background: darkgray;
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-circle {
+  background: var(--secondary-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 5%;
+  transition: all .3s linear;
+}
+
+.darkmode {
+  animation: toggle-darkmode .3s linear forwards;
+}
+
+.lightmode {
+  animation: toggle-lightmode .3s linear forwards;
+}
+
+@keyframes toggle-darkmode {
+  to {
+    left: 75%;
+    background: var(--dark-color);
+  }
+}
+
+@keyframes toggle-lightmode {
+  from {
+    left: 75%;
+  }
+  to {
+    left: 5%;
+    background: var(--secondary-color);
+  }
+}
+
+
 .info-section {
   display: flex;
   flex-direction: column;
@@ -108,11 +168,11 @@ header h2 strong {
 .info-section .info .name {
   font-size: 45px;
   font-family: Ojuju;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .info-section .info .name strong {
-  color: hsla(219, 68%, 51%, 0.99);
+  color: var(--secondary-color);
 }
 
 .info-section .info .role {
@@ -120,7 +180,7 @@ header h2 strong {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   line-height: 30px;
-  color: #fff;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -131,7 +191,20 @@ header h2 strong {
   overflow: hidden;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
-  box-shadow: 2px 5px 50px hsla(219, 68%, 51%, 0.99);
+  box-shadow: 2px 5px 50px var(--secondary-color);
+}
+
+.info-section .more-info {
+  width: 100%;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.more-info p {
+  text-align: center;
+  color: var(--primary-color);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
 }
 
 .image img {
@@ -149,7 +222,7 @@ header h2 strong {
 
 .languages h1 {
   font-size: 30px;
-  color: #fff;
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 10px;
 }
@@ -163,7 +236,7 @@ header h2 strong {
 
 .language-container div:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 40px hsla(219, 68%, 51%, 0.99);
+  box-shadow: 2px 2px 40px var(--secondary-color);
   border-radius: 10px;
 }
 
@@ -196,14 +269,14 @@ header h2 strong {
 }
 
 .about-section {
-  background: hsla(219, 68%, 51%, 0.99);
+  background: var(--secondary-color);
   width: 100%;
   height: 200px;
   padding: 10px;
 }
 
 .about-section h1 {
-  color: #fff;
+  color: var(--primary-color);
   font-size: 30px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -222,7 +295,7 @@ header h2 strong {
 }
 
 .contact-section h1 {
-  color: #fff;
+  color: var(--primary-color);
   font-size: 30px;
   font-weight: bold;
 }
@@ -267,7 +340,7 @@ form .input-container {
   /* Adjust left position */
   transform: translateY(0);
   background: hsla(235, 2%, 16%, 1);
-  color: #fff;
+  color: var(--primary-color);
   font-size: 12px;
 }
 
@@ -280,23 +353,24 @@ form button {
   width: 100%;
   height: 40px;
   border-radius: 50px;
-  background: hsla(219, 68%, 51%, 0.99);
+  background: var(--secondary-color);
   color: #fff;
   font-weight: bold;
+  font-size: 20px;
   border: none;
   outline: none;
   margin-top: 10px;
 }
 
 .contact p {
-  color: #fff;
+  color: var(--primary-color);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   line-height: 40px;
 }
 
 .contact i {
-  color: hsla(219, 68%, 51%, 0.99);
+  color: var(--secondary-color);
   font-size: 20px;
 }
 
@@ -304,32 +378,63 @@ form button {
 summary {
   font-weight: bold;
   font-size: 30px;
-  color: #fff;
+  color: var(--primary-color);
   cursor: pointer;
   margin: 20px 0;
 }
 
 details ul {
   padding: 20px;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 details p {
   font-size: 15px;
-  color: #fff;
+  color: var(--primary-color);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 details p a {
-  color: hsla(219, 68%, 51%, 0.99);
+  color: var(--secondary-color);
   font-weight: bold;
   font-size: 17px;
   text-decoration: none;
 }
 
+.myImage {
+  opacity: 0.8;
+  transition: transform 2s ease;
+}
+
+.animate-img {
+  animation: img-animation 2s forwards;
+}
+
+@keyframes img-animation {
+  0% {
+    opacity: 1;
+    transform: scale(1)
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.hidden:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.hidden:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.hidden:nth-child(4) {
+  animation-delay: 400ms;
+}
+
 .hidden {
   opacity: 0;
-  transition: all 1s;
+  transition: all .5s ease;
   transform: translateX(-100%)
 }
 
@@ -337,6 +442,7 @@ details p a {
   opacity: 1;
   transform: translateX(0)
 }
+
 
 .toast-container {
   width: 100%;
@@ -363,6 +469,7 @@ details p a {
 
 .toast .toast-btn {
   font-size: 20px;
+  color: var(--primary-color);
 }
 
 
@@ -370,6 +477,6 @@ footer {
   margin-bottom: 0;
   margin-top: 10px;
   text-align: center;
-  color: #fff;
+  color: var(--primary-color);
   font-weight: bold;
 }

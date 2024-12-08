@@ -1,19 +1,3 @@
-/*const observer = new IntersectionObserver((entries)=> {
-  entries.forEach((entry)=> {
-    console.log(entry)
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show')
-    } //else {
-     // entry.target.classList.remove('show')
-    //} 
-  })
-});
-
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
-*/
-
 window.addEventListener('scroll', function() {
   const elements = document.querySelectorAll('.hidden');
   elements.forEach(element => {
@@ -24,7 +8,16 @@ window.addEventListener('scroll', function() {
       element.classList.remove('show');
     }
   });
+
+  const img = document.querySelector('.myImage');
+  if (window.scrollY > 10) {
+    img.classList.add('animate-img')
+  } else {
+    img.classList.remove('animate-img')
+  }
+  //console.log(img)
 });
+
 
 
 const blinker = document.getElementById("blinker");
@@ -65,15 +58,41 @@ navButton.addEventListener('click', () => {
     navigation.style.display = "none"
     icon.classList.remove('fa-times');
     icon.classList.add('fa-bars')
+    icon.style.color = '#fff'
     updateHeaderHeight()
   }
-  
   show = !show;
 })
 
+function showToast() {
+  const toast = document.querySelector(".toast-btn");
+  const toastContainer = document.querySelector(".toast-container");
+  toast.addEventListener('click', () => {
+    toastContainer.style.display = "none"
+  })
+  setTimeout(() => {
+    toastContainer.style.display = "none"
+  }, 10000)
+}
 
-const toast = document.querySelector(".toast-btn");
-const toastContainer = document.querySelector(".toast-container");
-toast.addEventListener('click', () => {
-  toastContainer.style.display = "none"
+showToast()
+
+
+let toggle = true;
+const toggleBtn = document.querySelector(".toggle-circle");
+const root = document.documentElement;
+toggleBtn.addEventListener('click', (e) => {
+  if (toggle) {
+    e.target.classList.remove('lightmode');
+    e.target.classList.add('darkmode');
+    root.style.setProperty('--background-color', '--primary-color');
+    root.style.setProperty('--primary-color', '--dark-color');
+  } else {
+    e.target.classList.remove('darkmode');
+    e.target.classList.add('lightmode');
+    root.style.setProperty('--background-color', 'hsla(0, 0%, 14%, 1)');
+    root.style.setProperty('--primary-color', '#fff');
+  }
+  toggle = !toggle;
+  //changeBackground()
 })
