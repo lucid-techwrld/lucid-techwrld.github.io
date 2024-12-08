@@ -96,3 +96,12 @@ toggleBtn.addEventListener('click', (e) => {
   toggle = !toggle;
   //changeBackground()
 })
+
+const toTop = document.querySelector(".back-to-top");
+toTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+  console.log('scrolllllll')
+})
