@@ -1,6 +1,5 @@
 window.onerror = function(message, source, lineno, colno, error) {
   console.error("Global error caught:", message);
-  // Return true to prevent the default browser error handling
   return true;
 };
 
