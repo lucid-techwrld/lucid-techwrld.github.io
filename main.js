@@ -1,3 +1,9 @@
+window.onerror = function(message, source, lineno, colno, error) {
+  console.error("Global error caught:", message);
+  // Return true to prevent the default browser error handling
+  return true;
+};
+
 window.addEventListener('scroll', function() {
   const elements = document.querySelectorAll('.hidden');
   elements.forEach(element => {
@@ -103,5 +109,4 @@ toTop.addEventListener('click', () => {
     top: 0,
     behavior: 'smooth'
   })
-  console.log('scrolllllll')
 })
