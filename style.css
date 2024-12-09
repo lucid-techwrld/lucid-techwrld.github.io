@@ -124,8 +124,7 @@ header .menu-icon {
   position: relative;
 }
 
-.toggle-circle {
-  background: var(--secondary-color);
+.fas {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -134,8 +133,14 @@ header .menu-icon {
   transition: all .3s linear;
 }
 
+.toggle-icon {
+  font-size: 20px;
+  color: var(--dark-color);
+}
+
 .darkmode {
   animation: toggle-darkmode .3s linear forwards;
+
 }
 
 .lightmode {
@@ -145,7 +150,6 @@ header .menu-icon {
 @keyframes toggle-darkmode {
   to {
     left: 75%;
-    background: var(--dark-color);
   }
 }
 
@@ -155,7 +159,7 @@ header .menu-icon {
   }
   to {
     left: 5%;
-    background: var(--secondary-color);
+    color: var(--dark-color);
   }
 }
 
@@ -191,7 +195,7 @@ header .menu-icon {
   overflow: hidden;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
-  box-shadow: 2px 5px 50px var(--secondary-color);
+  box-shadow: 2px 5px 30px var(--secondary-color);
 }
 
 .info-section .more-info {
@@ -236,7 +240,7 @@ header .menu-icon {
 
 .language-container div:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 40px var(--secondary-color);
+  box-shadow: 2px 2px 15px var(--secondary-color);
   border-radius: 10px;
 }
 

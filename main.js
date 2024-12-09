@@ -84,19 +84,25 @@ showToast()
 
 
 let toggle = true;
-const toggleBtn = document.querySelector(".toggle-circle");
+const toggleBtn = document.querySelector(".toggle-icon");
 const root = document.documentElement;
 toggleBtn.addEventListener('click', (e) => {
+  e.target.style.color = "#fff"
   if (toggle) {
     e.target.classList.remove('lightmode');
+    e.target.classList.remove('fa-moon')
     e.target.classList.add('darkmode');
+    e.target.classList.add('fa-sun')
     root.style.setProperty('--background-color', '--primary-color');
     root.style.setProperty('--primary-color', '--dark-color');
   } else {
     e.target.classList.remove('darkmode');
+    e.target.classList.remove('fa-sun')
     e.target.classList.add('lightmode');
+    e.target.classList.add('fa-moon')
     root.style.setProperty('--background-color', 'hsla(0, 0%, 14%, 1)');
     root.style.setProperty('--primary-color', '#fff');
+    
   }
   toggle = !toggle;
   //changeBackground()
